@@ -9,7 +9,21 @@
 
 .app {
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-  height: 100vh;
+  padding: 2rem 1rem;
+  /* height: 100vh; */
+}
+
+.app small {
+  color: hsl(229, 64%, 46%);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.state-0 {
+  background-image: url('./images/bg-triangle.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 70%;
 }
 
 .paper-gradient {
@@ -22,4 +36,8 @@
 
 .scissors-gradient {
   background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.rules-btn {
+  letter-spacing: 3px;
 }

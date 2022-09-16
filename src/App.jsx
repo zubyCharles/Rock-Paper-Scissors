@@ -1,16 +1,36 @@
+import { useState } from 'react';
+import Header from './components/Header/Header';
+import CurrentView from './components/View/CurrentView';
 import RulesModal from './components/Rules/RulesModal';
-import Paper from './components/Picks/Paper';
-import Rock from './components/Picks/Rock';
-import Scissors from './components/Picks/Scissors';
+import RulesBtn from './components/Rules/RulesBtn';
 import './App.css';
 
 const App = () => {
+  const [currentGameState, setCurrentGameState] = useState(0);
+
+  const [endMessage, setEndMessage] = useState('');
+
+  const [showRulesModal, setRulesModal] = useState(false);
+
+  const [playerData, setPlayerData] = useState({
+    hasPicked: false,
+    pick: null,
+  });
+
+  const [houseData, setHouseData] = useState({
+    hasPicked: false,
+    pick: null,
+  });
+
   return (
     <div className="app">
-      <RulesModal />
-      <Paper />
-      <Rock />
-      <Scissors />
+      {showRulesModal && <RulesModal toggleRulesModal={setRulesModal} />}
+      <Header />
+      <CurrentView
+        currentGameState={currentGameState}
+        setCurrentGameState={setCurrentGameState}
+      />
+      <RulesBtn toggleRulesModal={setRulesModal} />
     </div>
   );
 };
