@@ -120,7 +120,7 @@ const CurrentView = () => {
             </div>
           </div>
           <div className="w-fit mx-auto lg:-translate-y-[15rem]">
-            <h1 className="uppercase pb-3 text-[50px] lg:text-[44px] text-center text-slate-50">
+            <h1 className="uppercase pb-3 text-[50px] lg:text-[44px] font-semibold text-center text-slate-50">
               {whoWon === 'tie'
                 ? 'Its a tie'
                 : whoWon === 'player'
@@ -129,7 +129,7 @@ const CurrentView = () => {
             </h1>
             <button
               onClick={resetGame}
-              className={`w-full mx-auto px-16 py-2 uppercase text-[18px] text-center bg-slate-50 rounded-lg
+              className={`w-full mx-auto px-16 py-2 uppercase text-[18px] text-center font-semibold tracking-[3px] bg-slate-50 rounded-lg
               ${whoWon === 'house' ? 'text-rose-400' : 'text-dark'}`}
             >
               Play Again
