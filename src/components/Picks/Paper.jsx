@@ -40,9 +40,12 @@ const Paper = () => {
   })();
 
   return (
-    <div className="relative paper-gradient w-[7rem] h-[7rem] grid place-items-center mx-auto rounded-[50%]">
-      <div className="absolute w-[5rem] h-[5rem] grid place-items-center bg-slate-50 rounded-[50%]">
-        <img className="w-fit" src={PaperImg} alt="" onClick={playerMove} />
+    <div className="relative paper-gradient w-[7rem] h-[7rem] lg:w-[9rem] lg:h-[9rem] grid place-items-center mx-auto rounded-[50%]">
+      <div
+        onClick={playerMove}
+        className="absolute w-[5rem] h-[5rem] lg:w-[7rem] lg:h-[7rem] grid place-items-center bg-slate-50 rounded-[50%]"
+      >
+        <img className="w-fit" src={PaperImg} alt="" />
       </div>
     </div>
   );

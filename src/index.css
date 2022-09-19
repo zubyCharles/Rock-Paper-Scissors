@@ -38,6 +38,37 @@
   background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 }
 
+.indicator::before {
+  content: "";
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background: #fff;
+  opacity: .04;
+  transform: translate(-2.5rem, -2.5rem);
+}
+
 .rules-btn {
   letter-spacing: 3px;
+}
+
+@media (min-width:1024px) {
+  .state-0 {
+    background-image: url('./images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 25%;
+  }
+
+  .indicator::before {
+    content: "";
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background: #fff;
+    opacity: .04;
+    transform: translate(-5.5rem, -5.5rem);
+  }
 }

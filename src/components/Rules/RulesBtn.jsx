@@ -15,9 +15,9 @@ const RulesBtn = ({ showRulesModal, toggleRulesModal }) => {
   }, [showRulesModal]);
 
   return (
-    <div className="w-fit mx-auto pt-12 pb-[8rem]">
+    <div className="lg:relative w-fit mx-auto pt-12 pb-[8rem] lg:pb-[0]">
       <button
-        className="rules-btn py-2 px-8 text-slate-50 text-center border border-slate-400 rounded-lg"
+        className="lg:absolute lg:translate-x-[30rem] lg:-translate-y-[10rem] rules-btn py-2 px-8 text-slate-50 text-center border border-slate-400 rounded-lg"
         onClick={showRules}
       >
         RULES

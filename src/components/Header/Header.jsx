@@ -28,8 +28,8 @@ const Header = () => {
   }, [playerScore]);
 
   return (
-    <div className="pb-12">
-      <div className="w-[100%] flex flex-row justify-between px-8 py-2 border-[2px] border-header-outline rounded-lg">
+    <div className="pb-12 lg:pb-1">
+      <div className="w-[100%] lg:w-[35%] flex flex-row justify-between px-8 py-2 lg:mx-auto border-[2px] border-header-outline rounded-lg">
         <div className="w-[32%] grid place-content-center">
           <img className="w-[100%]" src={Logo} alt="" />
         </div>
