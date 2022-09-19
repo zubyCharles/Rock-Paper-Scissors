@@ -1,7 +1,6 @@
 import Rock from './Rock';
 import Paper from './Paper';
 import Scissors from './Scissors';
-// import { useGameContext } from '../../context/Game';
 
 const RenderPick = ({ pick }) => {
   if (pick) {
