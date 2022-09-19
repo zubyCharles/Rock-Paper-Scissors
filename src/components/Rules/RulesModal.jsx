@@ -12,7 +12,7 @@ const RulesModal = ({ toggleRulesModal }) => {
       <div className="w-[80%] lg:w-[70%] pb-20 lg:pb-4 mx-auto">
         <img className="w-[100%]" src={RulesImg} alt="" />
       </div>
-      <div className="w-[7%] mx-auto lg:absolute lg:top-8 lg:right-6 lg:pb-8 cursor-pointer">
+      <div className="w-[7%] mx-auto absolute top-8 right-6 lg:pb-8 cursor-pointer">
         <img
           className="w-[100%] lg:w-[70%]"
           src={IconClose}
