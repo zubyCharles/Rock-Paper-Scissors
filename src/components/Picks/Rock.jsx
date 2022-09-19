@@ -1,5 +1,5 @@
 import RockImg from '../../images/icon-rock.svg';
-import { useGameContext } from '../../context/Game';
+import { useGameContext } from '../../context/GameController';
 
 const Rock = () => {
   const {
@@ -14,19 +14,19 @@ const Rock = () => {
 
   const playerMove = () => {
     if (currentGameState === 0 && !playerData.hasPicked) {
-      setCurrentGameState(1);
       setPlayerData(() => ({ hasPicked: true, pick: 'rock' }));
+      setCurrentGameState(1);
     }
   };
 
   (() => {
     if (currentGameState === 1 && playerData.hasPicked) {
       setTimeout(() => {
-        setCurrentGameState(2);
         setHouseData(() => ({
           hasPicked: true,
           pick: picksArray[Math.round(Math.random() * (2 - 0) + 0)],
         }));
+        setCurrentGameState(2);
       }, 2000);
     }
   })();

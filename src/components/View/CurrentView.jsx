@@ -1,12 +1,36 @@
-import { useGameContext } from '../../context/Game';
+import { useGameContext } from '../../context/GameController';
 import Paper from '../Picks/Paper';
 import Rock from '../Picks/Rock';
 import Scissors from '../Picks/Scissors';
 import RenderPick from '../Picks/RenderPick';
-import Triangle from '../../images/bg-triangle.svg';
 
 const CurrentView = () => {
-  const { currentGameState, playerData, houseData } = useGameContext();
+  const {
+    currentGameState,
+    playerData,
+    houseData,
+    setCurrentGameState,
+    setPlayerData,
+    setHouseData,
+    whoWon,
+    setWhoWon,
+  } = useGameContext();
+
+  const resetGame = () => {
+    setPlayerData(() => ({
+      hasPicked: false,
+      pick: null,
+    }));
+
+    setHouseData(() => ({
+      hasPicked: false,
+      pick: null,
+    }));
+
+    setCurrentGameState(0);
+
+    setWhoWon(null);
+  };
 
   switch (currentGameState) {
     case 0:
@@ -89,9 +113,16 @@ const CurrentView = () => {
           </div>
           <div className="w-fit mx-auto">
             <h1 className="uppercase pb-3 text-[50px] text-center text-slate-50">
-              You win
+              {whoWon === 'tie'
+                ? 'Its a tie'
+                : whoWon === 'player'
+                ? 'You Win'
+                : 'You Loose'}
             </h1>
-            <button className="w-fit mx-auto px-16 py-2 uppercase text-[18px] text-center text-dark bg-slate-50 rounded-lg">
+            <button
+              onClick={resetGame}
+              className="w-full mx-auto px-16 py-2 uppercase text-[18px] text-center text-dark bg-slate-50 rounded-lg"
+            >
               Play Again
             </button>
           </div>

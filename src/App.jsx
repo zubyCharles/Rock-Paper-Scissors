@@ -13,7 +13,10 @@ const App = () => {
       {showRulesModal && <RulesModal toggleRulesModal={setRulesModal} />}
       <Header />
       <CurrentView />
-      <RulesBtn toggleRulesModal={setRulesModal} />
+      <RulesBtn
+        showRulesModal={showRulesModal}
+        toggleRulesModal={setRulesModal}
+      />
     </div>
   );
 };

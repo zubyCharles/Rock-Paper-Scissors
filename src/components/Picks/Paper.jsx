@@ -1,5 +1,5 @@
 import PaperImg from '../../images/icon-paper.svg';
-import { useGameContext } from '../../context/Game';
+import { useGameContext } from '../../context/GameController';
 
 const Paper = () => {
   const {
@@ -14,19 +14,19 @@ const Paper = () => {
 
   const playerMove = () => {
     if (currentGameState === 0 && !playerData.hasPicked) {
-      setCurrentGameState(1);
       setPlayerData(() => ({ hasPicked: true, pick: 'paper' }));
+      setCurrentGameState(1);
     }
   };
 
   (() => {
     if (currentGameState === 1 && playerData.hasPicked) {
       setTimeout(() => {
-        setCurrentGameState(2);
         setHouseData(() => ({
           hasPicked: true,
           pick: picksArray[Math.round(Math.random() * (2 - 0) + 0)],
         }));
+        setCurrentGameState(2);
       }, 2000);
     }
   })();
@@ -38,6 +38,7 @@ const Paper = () => {
       }, 1000);
     }
   })();
+
   return (
     <div className="relative paper-gradient w-[7rem] h-[7rem] grid place-items-center mx-auto rounded-[50%]">
       <div className="absolute w-[5rem] h-[5rem] grid place-items-center bg-slate-50 rounded-[50%]">
