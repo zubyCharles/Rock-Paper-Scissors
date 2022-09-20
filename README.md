@@ -2,6 +2,6 @@
 
 Made with ReactJS.
 
-##Courtesy Frontend Mentor.
+## Courtesy Frontend Mentor.
 
 Live link https://rok-paper-scissors.netlify.app/
