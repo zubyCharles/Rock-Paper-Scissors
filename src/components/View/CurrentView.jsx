@@ -122,7 +122,7 @@ const CurrentView = () => {
           <div className="w-fit mx-auto lg:-translate-y-[15rem]">
             <h1 className="uppercase pb-3 text-[50px] lg:text-[44px] font-semibold text-center text-slate-50">
               {whoWon === 'tie'
-                ? 'Its a tie'
+                ? "It's a tie"
                 : whoWon === 'player'
                 ? 'You Win'
                 : 'You Lose'}
